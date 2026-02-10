@@ -1,0 +1,56 @@
+{
+  "event": {
+    "name": "Tech Event 2026",
+    "description": "The official flagship tech innovation summit.",
+    "contact": "contact@techevent.com"
+  },
+  "schedule": [
+    {
+      "id": 1,
+      "track": "Web Development",
+      "time": "10:00 AM",
+      "description": "Exploring the future of the decentralized web."
+    },
+    {
+      "id": 2,
+      "track": "AI / ML",
+      "time": "11:30 AM",
+      "description": "Generative models and ethical implementation."
+    },
+    {
+      "id": 3,
+      "track": "Cyber Security",
+      "time": "02:00 PM",
+      "description": "Zero-trust architecture in modern enterprise."
+    },
+    {
+      "id": 4,
+      "track": "Cloud Computing",
+      "time": "03:30 PM",
+      "description": "Serverless optimization strategies."
+    }
+  ],
+  "speakers": [
+    {
+      "name": "Dr. Sarah Chen",
+      "expertise": "Web Technologies",
+      "company": "NextGen Web"
+    },
+    {
+      "name": "James Wilson",
+      "expertise": "AI Researcher",
+      "company": "DeepMindset"
+    },
+    {
+      "name": "Elena Rodriguez",
+      "expertise": "Cyber Security Analyst",
+      "company": "SecureNet"
+    },
+    {
+      "name": "Marcus Thorne",
+      "expertise": "Cloud Architect",
+      "company": "SkyScale"
+    }
+  ],
+  "registrations": []
+}

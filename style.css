@@ -1,7 +1,252 @@
-h1{
-    color:darkgreen;
+/* Tech Event 2026 - Main Stylesheet
+    A high-end, modern glassmorphism theme inspired by Task 1.
+    Constraint: FE - No external fonts.
+*/
+
+/* General Reset & Typography */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    /* Removed Inter to comply with "No external fonts" constraint */
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji";
 }
-p{
-    font-size:18px;
-    color:navy;
+
+body {
+    line-height: 1.6;
+    background: radial-gradient(circle at top left, #0f1b2e, #060b18 60%);
+    color: #f8fafc;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    overflow-x: hidden;
+}
+
+main {
+    width: 100%;
+    padding: 0 1rem 3rem;
+}
+
+/* Navigation Bar */
+nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px 40px;
+    background: rgba(255, 255, 255, 0.03);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+    width: 100%;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+nav a {
+    color: #cbd5e1;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 14px;
+    padding: 8px 16px;
+    transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+    border-radius: 8px;
+    display: inline-block;
+}
+
+nav a:hover {
+    color: #2dd4ff;
+    background: rgba(45, 212, 255, 0.1);
+    transform: translateY(-2px);
+}
+
+nav a:active {
+    transform: translateY(0) scale(0.95);
+    background: rgba(45, 212, 255, 0.2);
+}
+
+/* Main Content Containers */
+h1, h3 {
+    text-align: center;
+    color: white;
+    margin-bottom: 1.5rem;
+}
+
+h1 {
+    font-size: clamp(2rem, 5vw, 3rem);
+    margin-top: 3rem;
+    font-weight: 700;
+    background: linear-gradient(to right, #fff, #a5b4fc);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    letter-spacing: -0.02em;
+}
+
+h3 {
+    font-size: 1.5rem;
+    color: #2dd4ff;
+    margin-top: 2rem;
+}
+
+p {
+    max-width: 700px;
+    margin: 1rem auto;
+    text-align: center;
+    font-size: 1.1rem;
+    color: #94a3b8;
+}
+
+#qr-code {
+    display: flex;
+    justify-content: center;
+    margin: 2rem auto 0;
+}
+
+#qr-code canvas {
+    border-radius: 16px;
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.35);
+}
+
+/* Lists (Schedule & Speakers) */
+ul {
+    max-width: 600px;
+    margin: 3rem auto;
+    list-style: none;
+    padding: 0 1rem;
+}
+
+ul li {
+    background: rgba(255, 255, 255, 0.03);
+    backdrop-filter: blur(5px);
+    margin-bottom: 1rem;
+    padding: 1.25rem 1.5rem;
+    border-radius: 16px;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    color: #e2e8f0;
+    cursor: pointer;
+}
+
+ul li:hover {
+    transform: translateY(-5px);
+    background: rgba(255, 255, 255, 0.06);
+    border-color: rgba(45, 212, 255, 0.3);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+}
+
+ul li:active {
+    transform: translateY(-2px) scale(0.99);
+}
+
+/* Forms (Registration) */
+form {
+    background: rgba(255, 255, 255, 0.04);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    padding: 3rem;
+    border-radius: 24px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    max-width: 500px;
+    margin: 3rem auto;
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+}
+
+form label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: 600;
+    color: #94a3b8;
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+form input, 
+form select {
+    width: 100%;
+    padding: 0.85rem 1rem;
+    margin-bottom: 1.5rem;
+    background: rgba(6, 11, 24, 0.5);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 12px;
+    color: white;
+    font-size: 1rem;
+    transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+form input:focus, 
+form select:focus {
+    outline: none;
+    border-color: #2dd4ff;
+    box-shadow: 0 0 0 4px rgba(45, 212, 255, 0.15);
+}
+
+form button {
+    width: 100%;
+    padding: 1rem;
+    background: linear-gradient(90deg, #6a7cff, #2dd4ff);
+    border: none;
+    border-radius: 12px;
+    color: white;
+    font-weight: 700;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+    box-shadow: 0 4px 15px rgba(106, 124, 255, 0.3);
+}
+
+form button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 12px 25px rgba(45, 212, 255, 0.4);
+    filter: brightness(1.1);
+}
+
+form button:active {
+    transform: translateY(-1px) scale(0.96);
+    box-shadow: 0 4px 10px rgba(45, 212, 255, 0.2);
+    filter: brightness(0.9);
+}
+
+#form-status {
+    margin-top: 1rem;
+    text-align: center;
+    font-size: 0.95rem;
+    min-height: 1.2rem;
+}
+
+/* Footer */
+footer {
+    margin-top: auto;
+    padding: 3rem 1rem;
+    text-align: center;
+    border-top: 1px solid rgba(255, 255, 255, 0.05);
+    width: 100%;
+}
+
+footer p {
+    color: rgba(255, 255, 255, 0.3);
+    font-size: 0.85rem;
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+    nav {
+        flex-wrap: wrap;
+        padding: 15px;
+    }
+    
+    nav a {
+        font-size: 12px;
+        padding: 6px 10px;
+    }
+
+    h1 {
+        padding: 0 1rem;
+        margin-top: 2rem;
+    }
+
+    form {
+        padding: 2rem;
+        width: 95%;
+    }
 }
