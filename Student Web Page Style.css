@@ -1,0 +1,30 @@
+body{
+    font-family: 'Times New Roman', Times, serif;
+    background-color: lemonchiffon;
+    margin: 0px;
+}
+header{
+    background-color: lightblue;
+    text-align: center;
+    padding: 15px;
+}
+.content{
+    background-color: azure;
+    margin: 20px;
+    padding: 15px;
+    border-radius: 5px;
+}
+h2{
+    color: #003366;
+}
+table{
+    width: 100%;
+    border-collapse: collapse;
+    background-color: azure;
+    text-align: center;
+}
+footer{
+    background-color: khaki;
+    text-align: center;
+    padding: 10px;
+}
