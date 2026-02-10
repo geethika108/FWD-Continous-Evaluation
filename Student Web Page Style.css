@@ -1,6 +1,6 @@
 body{
     font-family: 'Times New Roman', Times, serif;
-    background-color: lemonchiffon;
+    background-color: pink;
     margin: 0px;
 }
 header{
@@ -27,4 +27,5 @@ footer{
     background-color: khaki;
     text-align: center;
     padding: 10px;
+
 }
